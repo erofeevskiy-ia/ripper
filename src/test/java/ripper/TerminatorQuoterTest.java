@@ -3,19 +3,24 @@ package ripper;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ripper.quoter.Quoter;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class TerminatorQuoterTest {
-    static ApplicationContext CTX = new ClassPathXmlApplicationContext("application-context.xml");
+    private static ApplicationContext CTX = new ClassPathXmlApplicationContext("application-context.xml");
 
     @Test
-    void testing(){
-        assertEquals("I'll be back",CTX.getBean(TerminatorQuoter.class).sayQuote());
+    void testing() {
+        assertEquals("I'll be back", CTX.getBean(TerminatorQuoter.class).sayQuote());
     }
 
-    public static void main(String[] args) {
-        CTX.getBean(TerminatorQuoter.class).consoleSayQuote();
+    public static void main(String[] args) throws InterruptedException {
+        while (true) {
+            Thread.sleep(500);
+            CTX.getBean(Quoter.class).consoleSayQuote();
+
+        }
     }
 
 }
