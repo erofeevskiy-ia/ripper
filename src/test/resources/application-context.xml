@@ -8,6 +8,7 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
+    <bean class="ripper.PostProxyInvokerContextListener/"/>
     <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
     <bean class="ripper.ProfilingHandlerBeanPostProcessor"/>
     <bean class="ripper.InjectRandomIntAnnotationBeanPostProcessor"/>

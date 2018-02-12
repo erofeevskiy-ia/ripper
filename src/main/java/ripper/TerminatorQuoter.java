@@ -2,6 +2,7 @@ package ripper;
 
 import lombok.Data;
 import ripper.annotations.InjectRandomInt;
+import ripper.annotations.PostProxy;
 import ripper.annotations.Profiling;
 import ripper.quoter.Quoter;
 
@@ -30,6 +31,7 @@ public class TerminatorQuoter implements Quoter {
     }
 
     @Override
+    @PostProxy
     public void consoleSayQuote() {
         for (int i = 0; i < repeat; i++)
             System.out.println("mes: " + message);

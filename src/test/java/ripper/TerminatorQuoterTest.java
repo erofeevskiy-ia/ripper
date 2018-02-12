@@ -16,11 +16,12 @@ class TerminatorQuoterTest {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        while (true) {
+        /*while (true) {
             Thread.sleep(500);
             CTX.getBean(Quoter.class).consoleSayQuote();
 
-        }
+        }*/
+        CTX.getBean(Quoter.class).consoleSayQuote();
     }
 
 }
