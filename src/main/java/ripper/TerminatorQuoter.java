@@ -1,6 +1,7 @@
 package ripper;
 
 import lombok.Data;
+import lombok.Setter;
 import org.springframework.context.annotation.Scope;
 import ripper.annotations.DeprecatedClass;
 import ripper.annotations.InjectRandomInt;
@@ -14,7 +15,9 @@ import javax.annotation.PostConstruct;
 @Profiling
 @DeprecatedClass(newImple = T1000.class)
 public class TerminatorQuoter implements Quoter {
+
     @InjectRandomInt(min = 2, max = 7)
+    @Setter
     private int repeat;
     private String message;
 

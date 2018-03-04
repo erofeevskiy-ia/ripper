@@ -24,5 +24,11 @@ class TerminatorQuoterTest {
         //CTX.getBean(Quoter.class).consoleSayQuote();
         System.out.println(CTX.getBean(Quoter.class).sayQuote());
     }
+    @Test
+    void testingOutApplicationContext(){
+        PropertyFileApplicationContext context
+                = new PropertyFileApplicationContext("context.properties");
+        context.getBean(Quoter.class).sayQuote();
+    }
 
 }
