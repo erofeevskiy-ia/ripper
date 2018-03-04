@@ -22,6 +22,7 @@ class TerminatorQuoterTest {
 
         }*/
         //CTX.getBean(Quoter.class).consoleSayQuote();
+        System.out.println(CTX.getBean(Quoter.class).sayQuote());
     }
 
 }

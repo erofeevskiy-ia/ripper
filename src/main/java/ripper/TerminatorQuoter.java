@@ -1,6 +1,8 @@
 package ripper;
 
 import lombok.Data;
+import org.springframework.context.annotation.Scope;
+import ripper.annotations.DeprecatedClass;
 import ripper.annotations.InjectRandomInt;
 import ripper.annotations.PostProxy;
 import ripper.annotations.Profiling;
@@ -10,6 +12,7 @@ import javax.annotation.PostConstruct;
 
 @Data
 @Profiling
+@DeprecatedClass(newImple = T1000.class)
 public class TerminatorQuoter implements Quoter {
     @InjectRandomInt(min = 2, max = 7)
     private int repeat;
@@ -31,7 +34,7 @@ public class TerminatorQuoter implements Quoter {
     }
 
     @Override
-    //@PostProxy
+    @PostProxy
     public void consoleSayQuote() {
         for (int i = 0; i < repeat; i++)
             System.out.println("mes: " + message);
