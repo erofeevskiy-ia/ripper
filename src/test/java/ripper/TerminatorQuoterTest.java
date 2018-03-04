@@ -12,7 +12,7 @@ class TerminatorQuoterTest {
 
     @Test
     void testing() {
-        assertEquals("I'll be back", CTX.getBean(TerminatorQuoter.class).sayQuote());
+        assertEquals("I'll be back", CTX.getBean(Quoter.class).sayQuote());
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -21,7 +21,7 @@ class TerminatorQuoterTest {
             CTX.getBean(Quoter.class).consoleSayQuote();
 
         }*/
-        CTX.getBean(Quoter.class).consoleSayQuote();
+        //CTX.getBean(Quoter.class).consoleSayQuote();
     }
 
 }

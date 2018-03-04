@@ -16,6 +16,7 @@ public class PostProxyInvokerContextListener implements ApplicationListener<Cont
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        System.out.println("start onApplicationEvent:"+event);
         ApplicationContext applicationContext = event.getApplicationContext();
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String name : beanDefinitionNames) {

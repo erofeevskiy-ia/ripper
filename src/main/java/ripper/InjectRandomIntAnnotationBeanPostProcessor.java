@@ -28,7 +28,7 @@ public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProce
                 ReflectionUtils.setField(f, bean, i);
             }
         }
-        System.out.println("from postProcessBefore");
+        System.out.println("from postProcessBefore INJECT_RANDOM:"+bean);
 
         return bean;
     }
@@ -36,7 +36,7 @@ public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProce
     @Nullable
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("from postProcessAfterInitialisation");
+        System.out.println("from postProcessAfterInitialisation INJECT_RANDOM:"+bean);
 
         return bean;
     }

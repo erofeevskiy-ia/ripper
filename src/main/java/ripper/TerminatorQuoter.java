@@ -31,7 +31,7 @@ public class TerminatorQuoter implements Quoter {
     }
 
     @Override
-    @PostProxy
+    //@PostProxy
     public void consoleSayQuote() {
         for (int i = 0; i < repeat; i++)
             System.out.println("mes: " + message);
